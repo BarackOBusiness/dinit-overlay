@@ -1,0 +1,2 @@
+# Eventually we should prevent other init systems from being installed
+# so their corresponding packages will be masked here.
