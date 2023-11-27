@@ -19,3 +19,8 @@ KEYWORDS="~amd64"
 #RDEPEND=""
 #DEPEND=""
 #BDEPEND=""
+
+src_configure() {
+  econf \
+    --shutdown-prefix=dinit-
+}
