@@ -1,5 +1,5 @@
 # TODO Soon
-- [ ] Patch turnstile at prepare-time to install pam_turnstile.so
+- [x] Configure turnstile at prepare-time to install pam_turnstile.so
 	to `/lib64/security` to be in line with the rest of gentoo.
 - [ ] Include `pam.d/system-login` patch with turnstile package ?
 	specifically `-session optional pam_turnstile.so` needs to be added

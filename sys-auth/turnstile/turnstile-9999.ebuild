@@ -26,6 +26,7 @@ IUSE="+rundir"
 src_configure() {
   local emesonargs=(
     $(meson_use rundir manage_rundir)
+    -Dpam_moddir=/lib64/security
   )
 
   meson_src_configure
