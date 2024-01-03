@@ -8,7 +8,7 @@
 	(maybe change dinit install dir instead? undecided on this)
 - [ ] Include dinit wrapper with dinit package to load both
 	early boot and running service directories
-- [ ] Add LTO use flag for dinit package
+- [x] Add LTO use flag for dinit package
 - [ ] Look into how I can distribute wrapper commands and service
 	files through portage to make installation as a system 
 	service manager more painless

@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit autotools
+inherit autotools flag-o-matic
 
 DESCRIPTION="The dinit service supervision + init suite"
 HOMEPAGE="https://github.com/davmac314/dinit"
@@ -20,13 +20,18 @@ SLOT="0"
 
 # Dinit build docs recommend the usage of LTO, at this point in time
 # it is unknown how to go about supporting this
-#IUSE="lto"
+IUSE="+lto"
 
 #RDEPEND=""
 #DEPEND=""
 #BDEPEND=""
 
 src_configure() {
+  if use lto ; then
+    append-cflags -flto
+    append-cxxflags -flto
+  fi
+  
   econf \
     --shutdown-prefix=dinit-
 }
