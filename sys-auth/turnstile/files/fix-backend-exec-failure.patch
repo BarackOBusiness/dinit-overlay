@@ -1,0 +1,19 @@
+diff --git a/backend/dinit b/backend/dinit
+index b452974..c69ea2c 100644
+--- a/backend/dinit
++++ b/backend/dinit
+@@ -43,7 +43,7 @@ case "$1" in
+             echo "dinit: invalid control socket '$2'" >&2
+             exit 69
+         fi
+-        exec dinitctl --socket-path "$2" start boot
++        exec /sbin/dinitctl --socket-path "$2" start boot
+         ;;
+     stop)
+         exec kill -s TERM "$2"
+@@ -112,4 +112,4 @@ type = internal
+ waits-for.d = ${system_boot_dir}
+ EOF
+ 
+-exec dinit --user --ready-fd 3 --services-dir "$DINIT_DIR" "$@" 3>"$DINIT_READY_PIPE"
++exec /sbin/dinit --user --ready-fd 3 --services-dir "$DINIT_DIR" "$@" 3>"$DINIT_READY_PIPE"
