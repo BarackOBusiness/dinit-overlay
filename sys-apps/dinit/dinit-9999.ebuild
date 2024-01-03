@@ -2,11 +2,18 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-inherit autotools git-r3
+inherit autotools
 
 DESCRIPTION="The dinit service supervision + init suite"
 HOMEPAGE="https://github.com/davmac314/dinit"
-EGIT_REPO_URI="https://github.com/davmac314/dinit.git"
+
+if [[ ${PV} == 9999 ]]; then
+  inherit git-r3
+  EGIT_REPO_URI="https://github.com/davmac314/dinit.git"
+else
+  KEYWORDS="~amd64"
+  SRC_URI="https://github.com/davmac314/${PN}/releases/download/v${PV}/${P}.tar.xz"
+fi
 
 LICENSE="Apache-2.0"
 SLOT="0"
