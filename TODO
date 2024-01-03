@@ -1,0 +1,2 @@
+1. Document pam.d/system-login change ? create patch and apply this automatically
+2. Document turnstile dinit backend change : apply it at buildtime
