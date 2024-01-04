@@ -1,0 +1,21 @@
+diff --git a/backend/dinit b/backend/dinit
+index b452974..b0797b7 100644
+--- a/backend/dinit
++++ b/backend/dinit
+@@ -78,13 +78,13 @@ set -e
+ # set a bunch of defaults in case the conf cannot be read or is mangled
+ 
+ [ -z "$boot_dir" ] && boot_dir="${HOME}/.config/dinit.d/boot.d"
+-[ -z "$system_boot_dir" ] && system_boot_dir="/usr/lib/dinit.d/user/boot.d"
++[ -z "$system_boot_dir" ] && system_boot_dir="/usr/lib64/dinit.d/user/boot.d"
+ 
+ if [ -z "$services_dir1" ]; then
+     services_dir1="${HOME}/.config/dinit.d"
+     services_dir2="/etc/dinit.d/user"
+-    services_dir3="/usr/local/lib/dinit.d/user"
+-    services_dir4="/usr/lib/dinit.d/user"
++    services_dir3="/usr/local/lib64/dinit.d/user"
++    services_dir4="/usr/lib64/dinit.d/user"
+ fi
+ 
+ # translate service dirs to arguments; we pass them to dinit at the end
