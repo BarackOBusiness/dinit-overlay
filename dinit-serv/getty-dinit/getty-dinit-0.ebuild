@@ -17,14 +17,12 @@ src_unpack() {
 }
 
 src_install() {
-  exeinto /usr/libexec
-  doexe "${FILESDIR}/dinit-agetty"
-  doexe "${FILESDIR}/agetty-default"
-  
-  insinto /etc/dinit.d
-  doins "${FILESDIR}/agetty"
+  insinto "/etc/dinit.d"
+  dodir "/etc/dinit.d/getty.d"
+  doins "${FILESDIR}/getty"
 
-  for i in $(seq 1 8); do
-    doins "${FILESDIR}/agetty-tty${i}"
+  for i in $(seq 1 6); do
+    doins "${FILESDIR}/tty${i}"
+    dosym "/etc/dinit.d/tty${i}" "/etc/dinit.d/getty.d/tty${i}"
   done
 }
