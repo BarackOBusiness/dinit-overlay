@@ -1,0 +1,16 @@
+diff --git a/meson.build b/meson.build
+index 2a26fbb..7fa31b4 100644
+--- a/meson.build
++++ b/meson.build
+@@ -11,9 +11,9 @@ project(
+     license: 'BSD-2-Clause',
+ )
+ 
+-dlibdir = get_option('libdir') / 'dinit'
++dlibdir = '/usr/lib/dinit'
+ tmpfdir = get_option('libdir') / 'tmpfiles.d'
+-srvdir = get_option('libdir') / 'dinit.d'
++srvdir = '/usr/lib/dinit.d'
+ earlydir = srvdir / 'early'
+ 
+ kmod_dep = dependency('libkmod')

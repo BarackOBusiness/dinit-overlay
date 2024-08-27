@@ -18,13 +18,18 @@ fi
 LICENSE="Apache-2.0"
 SLOT="0"
 
-# Dinit build docs recommend the usage of LTO, at this point in time
-# it is unknown how to go about supporting this
-IUSE="+lto"
+# system designates you wish to use dinit as a system service supervisor, and
+# pulls in core services and agetty to allow you to boot to a login terminal
+IUSE="+lto system"
 
 #RDEPEND=""
 #DEPEND=""
 #BDEPEND=""
+PDEPEND="
+  system? (
+    dinit-serv/base
+    dinit-serv/agetty-dinit
+  )"
 
 src_configure() {
   if use lto ; then

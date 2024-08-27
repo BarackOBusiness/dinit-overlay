@@ -1,0 +1,5 @@
+type = process
+command = /usr/bin/seatd -g seat
+before = login.target
+depends-on = local.target
+smooth-recovery = true
