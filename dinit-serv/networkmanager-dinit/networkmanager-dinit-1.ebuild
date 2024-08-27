@@ -8,7 +8,11 @@ LICENSE="BSD-2-Clause"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+# networkmanager service depends on dbus
+RDEPEND="
+  net-misc/networkmanager
+  dinit-serv/dbus-dinit
+"
 
 src_unpack() {
   mkdir "${S}" || die
