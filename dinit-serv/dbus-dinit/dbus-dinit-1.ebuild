@@ -19,9 +19,11 @@ src_unpack() {
 src_install() {
   insinto /etc/dinit.d
   doins "${FILESDIR}/dbus"
-
   insinto /etc/dinit.d/user
   newins "${FILESDIR}/dbus.user" "dbus"
+
+  insinto /usr/lib64/tmpfiles.d
+  doins "${FILESDIR}/dbus.conf"
 
   exeinto /usr/libexec
   doexe "${FILESDIR}/dbus-session.wrapper"

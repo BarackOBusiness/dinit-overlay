@@ -28,7 +28,7 @@ IUSE="+lto system"
 PDEPEND="
   system? (
     dinit-serv/base
-    dinit-serv/agetty-dinit
+    dinit-serv/getty-dinit
   )"
 
 src_configure() {
