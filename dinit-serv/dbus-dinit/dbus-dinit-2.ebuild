@@ -22,7 +22,7 @@ src_install() {
   insinto /etc/dinit.d/user
   newins "${FILESDIR}/dbus.user" "dbus"
 
-  insinto /usr/lib64/tmpfiles.d
+  insinto /usr/lib/tmpfiles.d
   doins "${FILESDIR}/dbus.conf"
 
   exeinto /usr/libexec
