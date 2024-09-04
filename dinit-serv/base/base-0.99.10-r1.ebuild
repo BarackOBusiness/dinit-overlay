@@ -37,7 +37,9 @@ src_prepare() {
 	# applied, it seems like more continuous maintenance
 	# For now, we'll say this is in the interest of getting a reproducible dinit-booting
 	# system in gentoo as easily as possible
-	eapply "${FILESDIR}/libdir.patch"
+	# Additionally, since Gentoo has tmpfiles covered, it removes that part of the
+	# installation, since we don't want conflicts
+	eapply "${FILESDIR}/mesonbuild.patch"
 	# udevd symlink is pathed differently in chimera
 	find ./ -type f -exec sed -i "s|exec/udevd|/systemd/systemd-udevd|" {} +
 	# sd-tools as far as I'm concerned is not discernible from gentoo's systemd-utils yet
