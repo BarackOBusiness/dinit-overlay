@@ -19,6 +19,6 @@ src_unpack() {
 }
 
 src_install() {
-  insinto "/etc/dinit.d"
+  insinto /etc/dinit.d
   doins "${FILESDIR}/networkmanager"
 }

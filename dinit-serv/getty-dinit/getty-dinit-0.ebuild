@@ -17,7 +17,7 @@ src_unpack() {
 }
 
 src_install() {
-  insinto "/etc/dinit.d"
+  insinto /etc/dinit.d
   dodir "/etc/dinit.d/getty.d"
   doins "${FILESDIR}/getty"
 

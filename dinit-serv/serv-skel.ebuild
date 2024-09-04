@@ -8,11 +8,14 @@ LICENSE="BSD-2-Clause"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=""
+RDEPEND="
+  
+"
 
 src_unpack() {
   mkdir "${S}" || die
 }
 
 src_install() {
+  insinto /etc/dinit.d
 }
