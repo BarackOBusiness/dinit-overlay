@@ -21,3 +21,10 @@ src_install() {
   insinto /etc/dinit.d
   doins "${FILESDIR}/polkitd"
 }
+
+pkg_postinst() {
+  ewarn "You must install the polkit package provided from this overlay for"
+  ewarn "this service to function. polkitd does not handle readiness with"
+  ewarn "dinit and failure to install the overlay variant will result in a non"
+  ewarn "booting system should your boot sequence depend on polkitd."
+}
