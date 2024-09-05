@@ -1,6 +1,6 @@
 # chronyd service, cannot handle readiness on its own
 type = process
-command = /usr/sbin/chronyd -n -u _chrony
+command = /usr/sbin/chronyd -n -u ntp
 depends-on = network.target
 depends-on = local.target
 smooth-recovery = true
