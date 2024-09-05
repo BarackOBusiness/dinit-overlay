@@ -10,6 +10,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
   sys-auth/polkit
+  dinit-serv/dbus-dinit
 "
 
 src_unpack() {

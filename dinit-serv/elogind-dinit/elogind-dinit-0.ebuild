@@ -10,6 +10,9 @@ KEYWORDS="~amd64"
 
 RDEPEND="
   sys-auth/elogind
+  dinit-serv/dbus-dinit
+  # Also needs polkit if elogind has polkit USE enabled
+  # not sure how to go about that for now
 "
 
 src_unpack() {

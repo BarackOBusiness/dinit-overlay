@@ -10,6 +10,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
   net-wireless/iwd
+  dinit-serv/dbus-dinit
 "
 
 src_unpack() {

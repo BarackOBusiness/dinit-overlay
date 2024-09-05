@@ -10,6 +10,7 @@ KEYWORDS="~amd64"
 
 RDEPEND="
   sys-auth/rtkit
+  dinit-serv/polkit-dinit
 "
 
 src_unpack() {
