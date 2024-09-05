@@ -1,0 +1,5 @@
+type = process
+command = /sbin/dhcpcd -B -M -j /var/log/dhcpcd-service.log
+before = network.target
+depends-on = pre-network.target
+logfile = /var/log/dhcpcd.log

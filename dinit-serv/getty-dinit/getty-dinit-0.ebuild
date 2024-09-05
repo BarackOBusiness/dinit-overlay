@@ -3,7 +3,8 @@
 EAPI=8
 
 DESCRIPTION="Dinit service description files for tty"
-HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/nyagetty"
+# Unsure where I got this set of service descriptions but it was on my system
+# HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/nyagetty"
 LICENSE="BSD-2-Clause"
 SLOT="0"
 KEYWORDS="~amd64"
