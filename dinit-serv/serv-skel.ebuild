@@ -4,12 +4,12 @@ EAPI=8
 
 DESCRIPTION="Dinit service description files for "
 HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/"
-LICENSE="BSD-2-Clause"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
 RDEPEND="
-  
+
 "
 
 src_unpack() {
