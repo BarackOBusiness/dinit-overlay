@@ -15,7 +15,7 @@ else
   SRC_URI="https://github.com/chimera-linux/${PN}/archive/refs/tags/v${PV}.tar.gz"
 fi
 
-LICENSE="BSD-2-Clause"
+LICENSE="BSD-2"
 SLOT="0"
 
 #RDEPEND=""
@@ -29,7 +29,7 @@ src_prepare() {
   eapply "${FILESDIR}/fix-backend-exec-failure.patch"
   # This patch is currently hardcoded, but on a multilib 64 bit system, dinit-chimera will
   # install to /usr/lib64. Until I make some final decisions on where system services
-  # should go *in gentoo*, I'm going to make this package work as well as possible under 
+  # should go *in gentoo*, I'm going to make this package work as well as possible under
   # my system configuration.
   eapply "${FILESDIR}/multilib.patch"
   eapply_user
@@ -46,7 +46,7 @@ src_configure() {
 
 src_install() {
   meson_src_install
-  
+
   insinto /etc/pam.d
   doins "${FILESDIR}/system-login"
 }

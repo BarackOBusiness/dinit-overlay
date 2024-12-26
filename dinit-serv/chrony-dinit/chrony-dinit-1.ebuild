@@ -4,7 +4,7 @@ EAPI=8
 
 DESCRIPTION="Dinit service description files for chrony"
 HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/chrony-dinit"
-LICENSE="BSD-2-Clause"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 

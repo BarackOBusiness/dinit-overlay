@@ -15,7 +15,7 @@ else
 	S="${WORKDIR}/dinit-chimera-${PV}"
 fi
 
-LICENSE="BSD-2 Clause"
+LICENSE="BSD-2"
 SLOT=0
 
 RDEPEND=""

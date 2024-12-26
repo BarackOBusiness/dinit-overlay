@@ -4,7 +4,7 @@ EAPI=8
 
 DESCRIPTION="Dinit service description files for openssh ssh daemon"
 HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/openssh-dinit"
-LICENSE="BSD-2-Clause"
+LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
 
