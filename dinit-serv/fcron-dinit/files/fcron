@@ -1,0 +1,6 @@
+type			= process
+command			= /usr/libexec/fcron -f
+logfile			= /var/log/fcron.log
+smooth-recovery	= true
+after			= local.target
+before			= login.target
