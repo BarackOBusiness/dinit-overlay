@@ -18,5 +18,5 @@ src_unpack() {
 
 src_install() {
   insinto /etc/dinit.d
-  doins "${FILES}/murmur"
+  doins "${FILESDIR}/murmur"
 }

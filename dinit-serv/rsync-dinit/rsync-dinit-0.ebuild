@@ -18,9 +18,9 @@ src_unpack() {
 
 src_install() {
   insinto /etc
-  doins "${FILES}/rsyncd.conf"
+  doins "${FILESDIR}/rsyncd.conf"
   insinto /etc/dinit.d
-  doins "${FILES}/rsync"
+  doins "${FILESDIR}/rsync"
   exeinto /usr/libexec
-  newexe "${FILES}/rsyncd.sh" "rsyncd"
+  newexe "${FILESDIR}/rsyncd.sh" "rsyncd"
 }
