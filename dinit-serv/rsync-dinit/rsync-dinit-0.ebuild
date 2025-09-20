@@ -20,7 +20,7 @@ src_install() {
   insinto /etc
   doins "${FILESDIR}/rsyncd.conf"
   insinto /etc/dinit.d
-  doins "${FILESDIR}/rsync"
+  doins "${FILESDIR}/rsyncd"
   exeinto /usr/libexec
   newexe "${FILESDIR}/rsyncd.sh" "rsyncd"
 }
