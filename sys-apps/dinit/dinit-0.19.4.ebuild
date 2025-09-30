@@ -24,17 +24,17 @@ SLOT="0"
 # running as init in conjunction with another installation
 IUSE="sysv-utils +system"
 
-#RDEPEND=""
-#DEPEND=""
-#BDEPEND=""
-PDEPEND="
-  sysv-utils? (
-    !sys-apps/s6-linux-init[sysv-utils]
-    !sys-apps/openrc[sysv-utils(-)]
-    !sys-apps/systemd[sysv-utils]
-    !sys-apps/sysvinit
-  )
+DEPEND="
+	sysv-utils? (
+		!sys-apps/s6-linux-init[sysv-utils]
+		!sys-apps/openrc[sysv-utils(-)]
+		!sys-apps/systemd[sysv-utils]
+		!sys-apps/sysvinit
+	)
 "
+RDEPEND="${DEPEND}"
+#BDEPEND=""
+REQUIRED_USE="sysv-utils? ( system )"
 
 src_configure() {
   # Install sysvinit compatibility binaries prefixed as dinit- to coexist with
