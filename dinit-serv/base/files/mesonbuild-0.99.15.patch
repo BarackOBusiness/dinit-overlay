@@ -1,0 +1,21 @@
+diff --git a/meson.build b/meson.build
+index f7610d3..978aa8c 100644
+--- a/meson.build
++++ b/meson.build
+@@ -15,9 +15,8 @@ project(
+ pfx = get_option('prefix')
+ lexecdir = get_option('libexecdir')
+ sbindir = get_option('sbindir')
+-dlibdir = get_option('libdir') / 'dinit'
+-tmpfdir = get_option('libdir') / 'tmpfiles.d'
+-srvdir = get_option('libdir') / 'dinit.d'
++dlibdir = '/usr/lib/dinit'
++srvdir = '/usr/lib/dinit.d'
+ earlydir = srvdir / 'early'
+ 
+ kmod_dep = dependency('libkmod')
+@@ -48,4 +47,3 @@ subdir('early/helpers')
+ subdir('early/scripts')
+ subdir('man')
+ subdir('services')
+-subdir('tmpfiles')
