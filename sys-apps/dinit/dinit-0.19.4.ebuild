@@ -11,8 +11,7 @@ if [[ ${PV} == 9999 ]]; then
   inherit git-r3
   EGIT_REPO_URI="https://github.com/davmac314/dinit.git"
 else
-  # Currently in testing
-  KEYWORDS="-*"
+  KEYWORDS="~amd64"
   SRC_URI="https://github.com/davmac314/${PN}/releases/download/v${PV}/${P}.tar.xz"
 fi
 
@@ -42,4 +41,14 @@ src_configure() {
   econf \
     --enable-shutdown=$(use system) \
     --shutdown-prefix=$(usex sysv-utils "" "dinit-")
+}
+
+pkg_postinst() {
+	echo
+	ewarn "If you relied on this package to pull in the dinit base and getty services previously"
+	ewarn "you should add those to your @world set now to not have them removed on depclean."
+	elog "This overlay is in the process of being somewhat restructured to support fully"
+	elog "replacing openrc instead of solely running alongside it, as such, some"
+	elog "cleanups are happening to move ebuild behavior to where it's more appropriate."
+	echo
 }

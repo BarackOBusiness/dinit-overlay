@@ -17,6 +17,7 @@ fi
 
 LICENSE="BSD-2"
 SLOT=0
+IUSE="sysv-utils"
 
 DEPEND="
 	>=sys-apps/dinit-0.18.0
@@ -40,6 +41,11 @@ src_prepare() {
 	# Additionally, since Gentoo has tmpfiles covered, it removes that part of the
 	# installation, since we don't want conflicts
 	eapply "${FILESDIR}/mesonbuild-${PV}.patch"
+	# This will be part 2 of the sysv-utils, dinit will only symlink its halt program
+	# to the other utility system power programs, never dinit to init,
+	# dinit-chimera provides an init script to run dinit with a cleaned env,
+	# so we'll install that for the dinit profile target
+	[ ! $(use sysv-utils) ] && eapply "${FILESDIR}/init-${PV}.patch"
 	# udevd symlink is pathed differently in chimera
 	find ./ -type f -exec sed -i "s|exec/udevd|/systemd/systemd-udevd|" {} +
 	# sd-tools as far as I'm concerned is not discernible from gentoo's systemd-utils yet

@@ -1,0 +1,2 @@
+sys-apps/dinit sysv-utils
+dinit-serv/base sysv-utils

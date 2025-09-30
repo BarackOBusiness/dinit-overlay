@@ -1,0 +1,19 @@
+diff --git a/early/scripts/meson.build b/early/scripts/meson.build
+index bff5a1d..6918e41 100644
+--- a/early/scripts/meson.build
++++ b/early/scripts/meson.build
+@@ -72,14 +72,3 @@ configure_file(
+     install_dir: dlibdir,
+     install_mode: 'rwxr-xr-x',
+ )
+-
+-# init file
+-configure_file(
+-    input: '../../init',
+-    output: 'init',
+-    configuration: confd,
+-    format: 'cmake@',
+-    install: true,
+-    install_dir: sbindir,
+-    install_mode: 'rwxr-xr-x',
+-)
