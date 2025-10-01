@@ -1,11 +1,8 @@
 # TODO Soon
-- [ ] Check for dinit-serv/base updates
-- [ ] Verify if overlay covers enough configuration to support "phase 2" as per the README
-- [ ] Preliminary modifications to dinit ebuild to block sysvinit and produce regular /sbin links for system use flag
-
-# TODO Eventually
-- [ ] Profiles that target dinit, and pull in necessary services
-	as expected and necessary and replaces openrc
+- [ ] Write pkg_config phases for configuring a dinit booting system solely with emerge
+- [ ] Test run fresh installation of gentoo with first boot as dinit
+- [ ] Test run fresh installation of gentoo replacing openrc live via dinit profile
+- [ ] Update README with instructions based on the results of the above
 
 # TODO Eternally
 - [ ] Cover more services
