@@ -1,0 +1,4 @@
+# Add dinit and dinit-chimera suite to the system set
+
+*sys-apps/dinit
+*dinit-serv/base

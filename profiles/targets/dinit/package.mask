@@ -1,2 +1,11 @@
-# Eventually we should prevent other init systems from being installed
-# so their corresponding packages will be masked here.
+# Mask other init systems from being installed
+
+sys-apps/openrc
+sys-apps/systemd
+sys-apps/sysvinit
+sys-apps/s6-linux-init
+sys-process/runit
+
+# Mask update from gentoo upstream
+
+>sys-kernel/dracut-108-r4

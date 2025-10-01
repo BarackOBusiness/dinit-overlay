@@ -43,9 +43,7 @@ src_prepare() {
 	# to the other utility system power programs, never dinit to init,
 	# dinit-chimera provides an init script to run dinit with a cleaned env,
 	# so we'll install that for the dinit profile target
-	[ ! $(use sysv-utils) ] && eapply "${FILESDIR}/init-${PV}.patch"
-	# udevd symlink is pathed differently in chimera
-	find ./ -type f -exec sed -i "s|exec/udevd|/systemd/systemd-udevd|" {} +
+	[ ! use sysv-utils ] && eapply "${FILESDIR}/init-${PV}.patch"
 	# sd-tools as far as I'm concerned is not discernible from gentoo's systemd-utils yet
 	find ./ -type f -exec sed -i "s|sd-tmpfiles|systemd-tmpfiles|" {} +
 

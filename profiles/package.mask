@@ -1,2 +1,0 @@
-virtual/service-manager
-=dinit-serv/base-0.99.15
