@@ -21,16 +21,14 @@ IUSE="sysv-utils"
 
 DEPEND="
 	>=sys-apps/dinit-0.18.0
-	sys-apps/systemd-utils[tmpfiles,udev]
+	sys-apps/systemd-utils[tmpfiles]
 	sys-apps/kmod
 	app-alternatives/sh
 	app-alternatives/awk
 	sys-apps/util-linux
+	dinit-serv/dinit-devd
 "
 RDEPEND="${DEPEND}"
-# I'm unsure if app-alternatives/sh should've been put here, I don't know whether
-# to just omit the shell depend or if this is okay assuming app-alternatives/sh
-# is pulled in by the system set or something
 
 src_prepare() {
 	# This patch forces the installation to /usr/lib/ even on multilib systems, dinit will
