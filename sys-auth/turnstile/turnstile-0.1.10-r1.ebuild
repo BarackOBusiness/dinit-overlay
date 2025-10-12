@@ -44,9 +44,12 @@ src_configure() {
   meson_src_configure
 }
 
-src_install() {
-  meson_src_install
-
-  insinto /etc/pam.d
-  doins "${FILESDIR}/system-login"
+pkg_postinst() {
+  echo ""
+  ewarn "This package no longer edits the system-login pam configuration module."
+  ewarn "Instead, the usual functionality is now provided by a patch to gentoo's"
+  ewarn "pambase mechanism."
+  ewarn "It is recommended to select sys-auth/pambase::dinit-overlay and add"
+  ewarn "turnstile to USE for continued turnstile functionality."
+  echo ""
 }

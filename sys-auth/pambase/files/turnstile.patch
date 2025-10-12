@@ -1,0 +1,29 @@
+diff --git a/pambase.py b/pambase.py
+index 4180cbb..56e45cc 100755
+--- a/pambase.py
++++ b/pambase.py
+@@ -31,6 +31,9 @@ def main():
+     parser.add_argument(
+         "--systemd", action="store_true", help="enable pam_systemd.so module"
+     )
++    parser.add_argument(
++        "--turnstile", action="store_true", help="enable pam_turnstile.so module"
++    )
+     parser.add_argument(
+         "--homed", action="store_true", help="enable pam_systemd_home.so module"
+     )
+diff --git a/templates/system-login.tpl b/templates/system-login.tpl
+index 77926b7..ada6bce 100644
+--- a/templates/system-login.tpl
++++ b/templates/system-login.tpl
+@@ -32,6 +32,10 @@ session		optional	pam_mail.so
+ -session	optional	pam_systemd.so
+ {% endif %}
+ 
++{% if turnstile %}
++-session	optional	pam_turnstile.so
++{% endif %}
++
+ {% if elogind %}
+ -session	optional	pam_elogind.so
+ {% endif %}

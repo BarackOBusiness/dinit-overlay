@@ -1,0 +1,5 @@
+# This package has been unmaintained practically since I've included it
+# as I've rarely used polkit since. Gentoo upstream has seen updates
+# and possibly the turnstile patch could been upstreamed by now, I
+# wouldn't know, but eventually I might remove this.
+sys-auth/polkit
