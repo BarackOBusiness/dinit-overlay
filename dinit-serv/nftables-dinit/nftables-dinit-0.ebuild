@@ -27,7 +27,6 @@ pkg_postinst() {
   elog "This service does not exhibit feature parity with the corresponding"
   elog "OpenRC init script, it does however inherit some of it's configuration."
   elog "Set the value of the variable NFTABLES_SAVE to the path of an nftables"
-  elog "ruleset you wish to be loaded."
-  elog "Additionally the PANIC_ON_STOP variable is respected."
+  elog "ruleset you wish to be loaded. (remove surrounding quotation marks)"
   echo ""
 }

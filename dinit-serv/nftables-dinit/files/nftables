@@ -2,8 +2,8 @@
 # however function parity will probably not be a goal of this service
 
 type = scripted
-command = /usr/libexec/nftables/helper.sh start
-stop-command = /usr/libexec/nftables/helper.sh stop
+command = /usr/libexec/nftables/helper.sh start $NFTABLES_SAVE
+stop-command = /usr/libexec/nftables/helper.sh stop $NFTABLES_SAVE
 env-file = /etc/conf.d/nftables
 before = pre-network.target
 depends-on = pre-local.target
