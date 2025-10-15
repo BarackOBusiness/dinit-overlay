@@ -3,7 +3,6 @@
 EAPI=8
 
 DESCRIPTION="Dinit service description files for the mumble server murmur"
-HOMEPAGE="https://pkgs.chimera-linux.org/package/current/main/x86_64/"
 LICENSE="BSD-2"
 SLOT="0"
 KEYWORDS="~amd64"
