@@ -1,0 +1,10 @@
+# will reuse the openrc configuration at /etc/conf.d/nftables for some things
+# however function parity will probably not be a goal of this service
+
+type = scripted
+command = /usr/libexec/nftables/helper.sh start
+stop-command = /usr/libexec/nftables/helper.sh stop
+env-file = /etc/conf.d/nftables
+before = pre-network.target
+depends-on = pre-local.target
+
