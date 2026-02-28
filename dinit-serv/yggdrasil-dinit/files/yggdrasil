@@ -1,0 +1,8 @@
+# Software router to access the Yggdrasil overlay testnet
+
+type            = process
+command	        = /usr/bin/yggdrasil -useconffile /etc/yggdrasil.conf
+depends-on      = network.target
+log-type        = buffer
+log-buffer-size = 8192
+restart         = true
