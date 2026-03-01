@@ -5,3 +5,4 @@ command	        = /usr/bin/yggdrasil -useconffile /etc/yggdrasil.conf
 depends-on      = network.target
 restart         = true
 smooth-recovery = true
+logfile         = /var/log/yggdrasil.log
