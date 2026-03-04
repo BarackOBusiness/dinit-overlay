@@ -1,0 +1,7 @@
+# There are some revisions to the dinit-service format in this update
+# I truly cannot be bothered to update and test the whole dinit-chimera suite
+# right now. And if I recall correctly, there is reason to expect simply
+# updating and installing the new version will not work
+=sys-apps/dinit-0.20.0
+# Turnstile follows the new formatting as of 0.1.11
+=sys-auth/turnstile-0.1.11
