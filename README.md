@@ -3,6 +3,8 @@ This is a work in progress project to replace the gentoo init system with [dinit
 I see this as a desirable goal because dinit is a simple, portable software with superior service management capabilities
 and the base of what's necessary for things like dependencies and user-level services
 without jumping to overly complex solutions with less obvious system operations such as in the case of s6 or the 66 suite.
+> [!NOTE]
+> This project is likely to go on hiatus for some time, there are some dinit updates I do not have the time or the resources to test are integrated successfully, I have learned a great deal and when I return to working on this I will be sure to do things more correctly
 
 Additionally, I will work to support other alternative software such as [turnstile](https://github.com/chimera-linux/turnstile) and [mdevd](https://github.com/skarnet/mdevd).
 
